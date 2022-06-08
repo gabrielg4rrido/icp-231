@@ -36,13 +36,13 @@ while np.abs(fp) > FTOL:
 
 print("Quantidade de interação até convergir:", qtd_itr)
 print("Erro de aproximação da função:", np.abs(fp))
-print("Erro do x:", np.abs(p - 0))
+print("Erro do x:", np.abs(p))
 print("Resultado encontrado:", p)
 print("Resultado esperado:", -0.044)
 
 plt.figure(dpi=400, figsize=(8, 6))
 plt.title("Erro ao longo da iterações")
-plt.plot(np.arange(qtd_itr), np.abs(np.array(ps_encontrados) - 0))
+plt.plot(np.arange(qtd_itr), np.abs(np.array(ps_encontrados)))
 plt.hlines(y=0, xmin=0, xmax=qtd_itr - 1, alpha=0.5)
 plt.xlabel("Iterações")
 plt.ylabel("Erro absoluto de x")
